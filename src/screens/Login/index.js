@@ -23,7 +23,8 @@ class ResetPassword extends React.Component {
       message: "",
       password: "",
       email:"",
-      confirmPassword: "",
+      secret:"a123456789"
+      
     };
   }
 
@@ -39,22 +40,23 @@ class ResetPassword extends React.Component {
   }
 
   onChangePassword = (text) => {
-    this.setState({ password: text, error: false });
+    this.setState({ secret: text, error: false });
   };
 
-  onChangeConfirmPassword = (text) => {
-    this.setState({ confirmPassword: text, error: false });
-  };
+  // onChangeConfirmPassword = (text) => {
+  //   this.setState({ confirmPassword: text, error: false });
+  // };
 
  
   handleSubmit = () => {
-    const { password} = this.state;
+    const { secret} = this.state;
     const { params } = this.props.route;
 
-    if (!password) {
-      this.setState({ error: true, message: "Fill all required fields" });
-    // } else if (password !== confirmPassword) {
-    //   this.setState({ error: true, message: "Passwords do not match" });
+    // if (!password) {
+    //   this.setState({ error: true, message: "Fill all required fields" });
+    // } else
+     if (secret !== "a123456789") {
+      this.setState({ error: true, message: "Unauthorized User" });
     } 
     else{
       this.props.navigation.navigate("ForgotPassword")
@@ -97,8 +99,18 @@ class ResetPassword extends React.Component {
             />
             <TextInputComponent
               label={"PASSWORD"}
+              // onChangeText={(text) => this.onChangePassword(text)}
+              // value={password}
+              // error={error && !password}
+              secureTextEntry={true}
+              style={styles.textInput}
+              placeholder={""}
+            />
+
+              <TextInputComponent
+              label={"User Secret"}
               onChangeText={(text) => this.onChangePassword(text)}
-              value={password}
+             // value={secret}
               error={error && !password}
               secureTextEntry={true}
               style={styles.textInput}
