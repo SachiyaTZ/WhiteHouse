@@ -8,6 +8,7 @@ export default ErrorMessageComponent = (props) => {
       style={{
         flexDirection: "row",
         borderRadius: 4,
+        marginTop:100,
         backgroundColor: THEME_ERROR_BOX_RED,
         padding: 10,
         marginVertical: 15,
