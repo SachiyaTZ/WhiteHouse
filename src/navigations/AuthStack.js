@@ -12,7 +12,7 @@ import ProductDetail from "../screens/ProductDetail/index.js";
 import ProductDetail2 from "../screens/ProductDetail2/index.js";
 import Checkout from "../screens/Checkout/index.js";
 import Cart from "../screens/Cart/index.js";
-
+import StackHeader from './util/StackHeader';
 
 
 
@@ -23,12 +23,20 @@ const AuthStackNavigator = (props) => {
   //const category_id = route.params && route.params.category_id ? route.params.category_id : null;
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+    headerMode="screen"
+            screenOptions={{
+               header:({scene,navigation})=>(
+                   <StackHeader scene={scene} navigation={navigation}/>
+               )
+            
+            }}
+    > 
       <Stack.Screen
         name="Login"
         component={Login}
         options={{
-          headerShown: false,
+          headerTitle: "WhiteHouse Products",
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
@@ -38,7 +46,7 @@ const AuthStackNavigator = (props) => {
         name="ForgotPassword"
         component={ForgotPassword}
         options={{
-          headerShown: false,
+          headerTitle: "Home",
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
@@ -47,7 +55,7 @@ const AuthStackNavigator = (props) => {
         name="ProductDetail"
         component={ProductDetail}
         options={{
-          headerShown: false,
+          headerTitle: "Products",
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
@@ -56,7 +64,7 @@ const AuthStackNavigator = (props) => {
         name="Cart"
         component={Cart}
         options={{
-          headerShown: false,
+          headerTitle: "Cart",
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
@@ -65,7 +73,7 @@ const AuthStackNavigator = (props) => {
         name="Checkout"
         component={Checkout}
         options={{
-          headerShown: false,
+          headerTitle: "Checkout",
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
@@ -74,7 +82,7 @@ const AuthStackNavigator = (props) => {
         name="ProductDetail2"
         component={ProductDetail2}
         options={{
-          headerShown: false,
+          headerTitle: "Products",
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
