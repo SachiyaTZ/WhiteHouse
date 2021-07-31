@@ -13,6 +13,7 @@ import ProductDetail2 from "../screens/ProductDetail2/index.js";
 import Checkout from "../screens/Checkout/index.js";
 import Cart from "../screens/Cart/index.js";
 import StackHeader from './util/StackHeader';
+//import ProductList from "../screens/ProductList/index.js"
 
 
 
@@ -86,6 +87,17 @@ const AuthStackNavigator = (props) => {
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
+
+{/* <Stack.Screen
+        name="ProductList"
+        component={ProductList}
+        options={{
+          headerTitle: "ProductList",
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        }}
+      /> */}
+
+
     </Stack.Navigator>
   );
 }

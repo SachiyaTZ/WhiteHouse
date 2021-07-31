@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
     
   },
   container : {
-    marginTop:100,
+    marginTop:50,
     marginBottom:400
   },
   textInput: {
@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
     color: THEME_BISMARK_COLOR,
   },
   buttonStyle: {
+   
     flexDirection: "row",
     height: 56,
     justifyContent: "center",
@@ -77,9 +78,31 @@ const styles = StyleSheet.create({
     borderRadius: 8
   },
   buttonText: {
+
     color: THEME_WHITE_COLOR,
     fontSize: 18,
     fontWeight: "800",
+  },
+  sliderImage: {
+    height: '100%',
+    width: '100%',
+    alignSelf: 'center',
+    borderRadius: 8,
+    marginTop:10
+  },
+  slide: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: 'transparent',
+    borderRadius: 8,
+  },
+  sliderContainer: {
+    height: 200,
+    width: '90%',
+    marginTop: 10,
+    justifyContent: 'center',
+    alignSelf: 'center',
+    borderRadius: 8,
   },
 });
 

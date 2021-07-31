@@ -17,7 +17,7 @@ const StackHeader=({scene,navigation})=>{
                 <MaterialCommunityIcons name="login" size={24} color="white"/>
             }
             <Appbar.Content title={title}/>
-            <Appbar.Action icon="bell" onPress={()=>console.log("Notification pressed")}/>
+            <Appbar.Action icon="cart" onPress={()=>console.log("Notification pressed")}/>
         </Appbar.Header>
     )
 };

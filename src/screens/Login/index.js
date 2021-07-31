@@ -6,6 +6,7 @@ import {
   StatusBar,
   ScrollView,
   View,
+  Image,
   TouchableOpacity,
   ActivityIndicator,
 } from "react-native";
@@ -14,6 +15,9 @@ import ErrorMessage from "../../components/Common/ErrorMessageComponent";
 //import { resetPassword, clearStatus } from "../../actions/userAction";
 import { THEME_WHITE_COLOR } from "../../constants/theme";
 import styles from "./style";
+
+import Swiper from 'react-native-swiper';
+import CardView from 'react-native-cardview'
 
 class ResetPassword extends React.Component {
   constructor(props) {
@@ -77,6 +81,7 @@ class ResetPassword extends React.Component {
   render() {
     const { confirmPassword, password, error, message } = this.state;
     return (
+      
       <React.Fragment>
         <StatusBar
           backgroundColor={THEME_WHITE_COLOR}
@@ -87,6 +92,39 @@ class ResetPassword extends React.Component {
             
 
             {error && message && <ErrorMessage message={message} />}
+
+      <View style={styles.sliderContainer}>
+         <View style={styles.slide}>
+              <Image
+              source={require('../../assets/whitelogo.jpg')}
+              resizeMode="cover"
+              style={styles.sliderImage}
+            
+            />
+          </View>
+      </View>
+
+      
+      <Text
+          style={{
+            alignSelf: 'center',
+            fontSize: 19,
+            fontWeight: 'bold',
+            color: '#333',
+          }}>
+          Welcome,
+        </Text>
+        <Text
+          style={{
+            alignSelf: 'center',
+            fontSize: 17,
+            fontWeight: 'bold',
+            color: 'grey',
+          }}>
+          Sign In to Continue!
+        </Text>
+    
+
             <View style={styles.container}>
             <TextInputComponent
               label={"Email"}
@@ -95,7 +133,7 @@ class ResetPassword extends React.Component {
               // error={error && !password}
               // secureTextEntry={true}
               style={styles.textInput}
-              placeholder={""}
+              placeholder={"Enter your Email"}
             />
             <TextInputComponent
               label={"PASSWORD"}
@@ -104,10 +142,10 @@ class ResetPassword extends React.Component {
               // error={error && !password}
               secureTextEntry={true}
               style={styles.textInput}
-              placeholder={""}
+              placeholder={"Enter Your Password"}
             />
 
-              <TextInputComponent
+              {/* <TextInputComponent
               label={"User Secret"}
               onChangeText={(text) => this.onChangePassword(text)}
              // value={secret}
@@ -115,7 +153,7 @@ class ResetPassword extends React.Component {
               secureTextEntry={true}
               style={styles.textInput}
               placeholder={""}
-            />
+            /> */}
 
 
 
@@ -132,7 +170,7 @@ class ResetPassword extends React.Component {
           style={styles.buttonStyleActive}
           onPress={() => this.handleSubmit()}
         >
-          <Text style={styles.buttonText}>{'LOGIN'}</Text>
+          <Text style={styles.buttonText}>{'SIGN IN'}</Text>
         </TouchableOpacity>
         </View>
           </ScrollView>
@@ -156,3 +194,4 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResetPassword);
+

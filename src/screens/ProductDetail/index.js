@@ -29,19 +29,59 @@ export default class ProductDetail extends Component {
         <ScrollView>
           <View style={{alignItems:'center', marginHorizontal:30}}>
             <Image style={styles.productImg} source={{uri:"https://www.whitehouseproductsltd.com/PRODUCT_IMAGES/0PL003APDFAN.jpg"}}/>
-            <Text style={styles.name}>Hydraulic Pumps</Text>
+            <Text style={styles.name}>OPL003ALSFAN</Text>
+            <Text style={{fontSize:16,
+                  color:"blue",
+                  fontWeight:'bold',
+                  textAlign:'left',
+                  }}>OPL 1.22 CC/REV HYDRAULIC GEAR PUMP</Text>
+
+<View style={styles.starContainer}>
+            <Image style={styles.star} source={{uri:"https://img.icons8.com/color/40/000000/star.png"}}/>
+            <Text style={{fontSize:15,
+                  color:"black",
+                  fontWeight:'bold',
+                  textAlign:'left',
+                  }}> 4.9 (120 Reviews)</Text>
+          </View>
+        
+                       <Text style={{fontSize:15,
+                       marginTop:10,
+                  color:"black",
+                  fontWeight:'bold',
+                  textAlign:'left',
+                  }}>Weight (kg): 2.2</Text>
+                       <Text style={{fontSize:15,
+                  color:"black",
+                  fontWeight:'bold',
+                  textAlign:"left",
+                  }}>Manufacturer : PARKER</Text>
+                       <Text style={{fontSize:15,
+                  color:"black",
+                  fontWeight:'bold',
+                  textAlign:'left',
+                  }}>Last Updated :29/06/2021</Text>
+                   <Text style={{fontSize:15,
+                       marginTop:10,
+                  color:"blue",
+                  fontWeight:'bold',
+                  textAlign:'left',
+                  }}>Available in stock</Text>
+                             <Text style={{fontSize:15,
+                       marginTop:10,
+                  color:"black",
+                  fontWeight:'bold',
+                  textAlign:'left',
+                  }}>Your Price(ex.vat) :</Text>
             <Text style={styles.price}>$ 120.22</Text>
-            <Text style={styles.description}>
+            {/* <Text style={styles.description}>
             Gear pumps are used in a wide range of hydraulic systems; in fact, they are easily among the most common types of pumps seen in this type of equipment. 
-            </Text>
+            </Text> */}
           </View>
-          <View style={styles.starContainer}>
-            <Image style={styles.star} source={{uri:"https://img.icons8.com/color/40/000000/star.png"}}/>
-            <Image style={styles.star} source={{uri:"https://img.icons8.com/color/40/000000/star.png"}}/>
-            <Image style={styles.star} source={{uri:"https://img.icons8.com/color/40/000000/star.png"}}/>
-            <Image style={styles.star} source={{uri:"https://img.icons8.com/color/40/000000/star.png"}}/>
-            <Image style={styles.star} source={{uri:"https://img.icons8.com/color/40/000000/star.png"}}/>
-          </View>
+      
+
+
+          
           {/* <View style={styles.contentColors}>
             <TouchableOpacity style={[styles.btnColor, {backgroundColor:"#00BFFF"}]}></TouchableOpacity> 
             <TouchableOpacity style={[styles.btnColor, {backgroundColor:"#FF1493"}]}></TouchableOpacity> 
@@ -50,12 +90,12 @@ export default class ProductDetail extends Component {
             <TouchableOpacity style={[styles.btnColor, {backgroundColor:"#20B2AA"}]}></TouchableOpacity> 
             <TouchableOpacity style={[styles.btnColor, {backgroundColor:"#FF4500"}]}></TouchableOpacity> 
           </View> */}
-          <View style={styles.contentSize}>
+          {/* <View style={styles.contentSize}>
             <TouchableOpacity style={styles.btnSize}><Text>Vane</Text></TouchableOpacity> 
             <TouchableOpacity style={styles.btnSize}><Text>Gear</Text></TouchableOpacity> 
             <TouchableOpacity style={styles.btnSize}><Text>Piston</Text></TouchableOpacity> 
           
-          </View>
+          </View> */}
           <View style={styles.separator}></View>
           <View style={styles.addToCarContainer}>
             <TouchableOpacity style={styles.shareButton} onPress={()=> this.clickEventListener()}>
@@ -78,15 +118,17 @@ const styles = StyleSheet.create({
     height:200,
   },
   name:{
-    fontSize:28,
-    color:"#696969",
-    fontWeight:'bold'
+    marginTop:10,
+    fontSize:16,
+    color:"black",
+    fontWeight:'bold',
+    textAlign:'left'
   },
   price:{
     marginTop:10,
-    fontSize:18,
-    color:"green",
-    fontWeight:'bold'
+    fontSize:15,
+    color:"blue",
+    // fontWeight:'bold'
   },
   description:{
     textAlign:'center',
@@ -94,8 +136,8 @@ const styles = StyleSheet.create({
     color:"#696969",
   },
   star:{
-    width:40,
-    height:40,
+    width:20,
+    height:20,
   },
   btnColor: {
     height:30,

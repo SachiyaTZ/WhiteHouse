@@ -21,7 +21,8 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import StarRating from "../../components/StarRating";
-
+import {  Dimensions } from 'react-native';
+const { width, height } = Dimensions.get('screen');
 class Dashboard extends React.Component {
 
   constructor(props) {
@@ -81,6 +82,15 @@ class Dashboard extends React.Component {
         </Swiper>
       </View>
 
+      <View style={{ width: width * 0.9, display: "flex", flexDirection: "row", flexWrap: "wrap", alignContent: "center", alignItems: "center", justifyContent: "center" }}>
+    <Image source={require('../../assets/motor.jpg')}style={{ width: "30%", height: 100, marginRight:11, marginTop:30, marginLeft:15 }} />
+    <Image source={require('../../assets/hydraulic.jpg')}style={{ width: "30%", height: 100, marginRight:11, marginTop:30 }} />
+    <Image source={require('../../assets/pinn.jpg')}style={{ width: "30%", height: 100, marginTop:30 }} />
+
+    {/* <Image source={require("img.png")}style={{ width: "45%", height: 200 }} />
+    <Image source={require("img.png")}style={{ width: "45%", height: 200 }} /> */}
+</View>
+
       <View style={styles.categoryContainer}>
         <TouchableOpacity
           style={styles.categoryBtn}
@@ -88,7 +98,7 @@ class Dashboard extends React.Component {
           <View style={styles.categoryIcon}>
             <MaterialCommunityIcons name="water-pump" size={35} color="#FF6347" />
           </View>
-          <Text style={styles.categoryBtnTxt}>Hydraulic Pumps</Text>
+          <Text style={styles.categoryBtnTxt}>Pumps</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.categoryBtn}
@@ -100,34 +110,40 @@ class Dashboard extends React.Component {
               color="#FF6347"
             />
           </View>
-          <Text style={styles.categoryBtnTxt}>Hydraulic Motors</Text>
+          <Text style={styles.categoryBtnTxt}>Motors</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.categoryBtn} onPress={() => this.handleSubmit2()}>
           <View style={styles.categoryIcon}>
             <MaterialCommunityIcons name="hydraulic-oil-level" size={35} color="#FF6347" />
           </View>
-          <Text style={styles.categoryBtnTxt}>Other Products</Text>
+          <Text style={styles.categoryBtnTxt}>Surplus</Text>
+        </TouchableOpacity>
+           <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
+          <View style={styles.categoryIcon}>
+            <MaterialIcons name="expand-more" size={35} color="#FF6347" />
+          </View>
+          <Text style={styles.categoryBtnTxt}>Other</Text>
         </TouchableOpacity>
       </View>
       <View style={[styles.categoryContainer, {marginTop: 10}]}>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => this.handleSubmitCart()}>
+        {/* <TouchableOpacity style={styles.categoryBtn} onPress={() => this.handleSubmitCart()}>
           <View style={styles.categoryIcon}>
             <MaterialCommunityIcons name="cart" size={35} color="#FF6347" />
           </View>
           <Text style={styles.categoryBtnTxt}>Your Cart</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
+        </TouchableOpacity> */}
+        {/* <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
           <View style={styles.categoryIcon}>
             <Fontisto name="shopping-store" size={35} color="#FF6347" />
           </View>
           <Text style={styles.categoryBtnTxt}>Services</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
+        </TouchableOpacity> */}
+        {/* <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
           <View style={styles.categoryIcon}>
             <MaterialIcons name="expand-more" size={35} color="#FF6347" />
           </View>
           <Text style={styles.categoryBtnTxt}>Show More</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
 
       <View style={styles.cardsWrapper}>
