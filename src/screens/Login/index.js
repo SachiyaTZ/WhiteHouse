@@ -27,7 +27,7 @@ class ResetPassword extends React.Component {
       message: "",
       password: "",
       email:"",
-      secret:"a123456789"
+      //secret:"shemal.deabrew@redtransact.com"
       
     };
   }
@@ -59,12 +59,12 @@ class ResetPassword extends React.Component {
     // if (!password) {
     //   this.setState({ error: true, message: "Fill all required fields" });
     // } else
-     if (secret !== "a123456789") {
-      this.setState({ error: true, message: "Unauthorized User" });
-    } 
-    else{
+    //  if (secret !== "shemal.deabrew@redtransact.com") {
+    //   this.setState({ error: true, message: "Unauthorized User" });
+    // } 
+    // else{
       this.props.navigation.navigate("ForgotPassword")
-    }
+   // }
     
     // else {
     //   let userData = {
@@ -126,7 +126,7 @@ class ResetPassword extends React.Component {
     
 
             <View style={styles.container}>
-            <TextInputComponent
+            {/* <TextInputComponent
               label={"Email"}
               // onChangeText={(text) => this.onChangePassword(text)}
               // value={email}
@@ -134,7 +134,18 @@ class ResetPassword extends React.Component {
               // secureTextEntry={true}
               style={styles.textInput}
               placeholder={"Enter your Email"}
+            /> */}
+
+<TextInputComponent
+              label={"Email"}
+              onChangeText={(text) => this.onChangePassword(text)}
+             // value={secret}
+              error={error && !password}
+              //secureTextEntry={true}
+              style={styles.textInput}
+              placeholder={"Enter your email"}
             />
+
             <TextInputComponent
               label={"PASSWORD"}
               // onChangeText={(text) => this.onChangePassword(text)}
@@ -145,16 +156,7 @@ class ResetPassword extends React.Component {
               placeholder={"Enter Your Password"}
             />
 
-              {/* <TextInputComponent
-              label={"User Secret"}
-              onChangeText={(text) => this.onChangePassword(text)}
-             // value={secret}
-              error={error && !password}
-              secureTextEntry={true}
-              style={styles.textInput}
-              placeholder={""}
-            /> */}
-
+      
 
 
             {/* <TextInputComponent

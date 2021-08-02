@@ -31,6 +31,7 @@
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "~3.0.0",
     "react-native-shadow-cards": "^1.0.2",
+    "react-native-simple-card-view": "^0.3.0",
     "react-native-stripe-checkout-webview": "^0.0.13",
     "react-native-swiper": "^1.6.0",
     "react-native-unimodules": "~0.13.3",

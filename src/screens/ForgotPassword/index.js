@@ -40,7 +40,9 @@ class Dashboard extends React.Component {
   handleSubmit2 = () => {
     this.props.navigation.navigate("ProductDetail2")
 };
-
+handleProductList = () => {
+  this.props.navigation.navigate("ProductList")
+};
 
 
   render() {
@@ -83,7 +85,9 @@ class Dashboard extends React.Component {
       </View>
 
       <View style={{ width: width * 0.9, display: "flex", flexDirection: "row", flexWrap: "wrap", alignContent: "center", alignItems: "center", justifyContent: "center" }}>
+    <TouchableOpacity style={styles.categoryBtn} onPress={() => this.handleProductList()}>
     <Image source={require('../../assets/motor.jpg')}style={{ width: "30%", height: 100, marginRight:11, marginTop:30, marginLeft:15 }} />
+    </TouchableOpacity>
     <Image source={require('../../assets/hydraulic.jpg')}style={{ width: "30%", height: 100, marginRight:11, marginTop:30 }} />
     <Image source={require('../../assets/pinn.jpg')}style={{ width: "30%", height: 100, marginTop:30 }} />
 
@@ -118,12 +122,19 @@ class Dashboard extends React.Component {
           </View>
           <Text style={styles.categoryBtnTxt}>Surplus</Text>
         </TouchableOpacity>
-           <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
+           {/* <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
           <View style={styles.categoryIcon}>
             <MaterialIcons name="expand-more" size={35} color="#FF6347" />
           </View>
           <Text style={styles.categoryBtnTxt}>Other</Text>
+        </TouchableOpacity> */}
+                <TouchableOpacity style={styles.categoryBtn} onPress={() => this.handleSubmitCart()}>
+          <View style={styles.categoryIcon}>
+            <MaterialCommunityIcons name="cart" size={35} color="#FF6347" />
+          </View>
+          <Text style={styles.categoryBtnTxt}>Your Cart</Text>
         </TouchableOpacity>
+
       </View>
       <View style={[styles.categoryContainer, {marginTop: 10}]}>
         {/* <TouchableOpacity style={styles.categoryBtn} onPress={() => this.handleSubmitCart()}>

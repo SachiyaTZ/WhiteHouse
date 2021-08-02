@@ -1,83 +1,119 @@
-// import React from 'react';
-// import { Text, View } from 'react-native';
-// import GridView from 'react-native-gridview';
-
-// const itemsPerRow = 3;
-
-// // Use data from an array...
-// const data = Array(20)
-//   .fill(null)
-//   .map((item, index) => index + 1);
-
-// // ...or create your own data source.
-// // This will randomly allocate 1-3 items per row, and will be used
-// // if the `randomizeRows` prop is `true`.
-// const randomData = [];
-// for (let i = 0; i < data.length; i) {
-//   const endIndex = Math.max(Math.round(Math.random() * itemsPerRow), 1) + i;
-//   randomData.push(data.slice(i, endIndex));
-//   i = endIndex;
-// }
-// const dataSource = new GridView.DataSource({
-//   rowHasChanged: (r1, r2) => r1 !== r2,
-// }).cloneWithRows(randomData);
-
-// export default function ProductList(props) {
-//   return (
-//     <GridView
-//       data={data}
-//       dataSource={props.randomizeRows ? dataSource : null}
-//       itemsPerRow={itemsPerRow}
-//       renderItem={(item, sectionID, rowID, itemIndex, itemID) => {
-//         return (
-//           <View style={{ flex: 1, backgroundColor: '#8F8', borderWidth: 1 }}>
-//             <Text>{`${item} (${sectionID}-${rowID}-${itemIndex}-${itemID})`}</Text>
-//           </View>
-//         );
-//       }}
-//     />
-//   );
-// }
-
 import React, { Component } from 'react';
-import { View, StyleSheet, Image } from 'react-native';
+import {Platform,StyleSheet,Text,View,Dimensions} from 'react-native';
+import { CardViewWithIcon } from "react-native-simple-card-view";
 
-import GridList from 'react-native-grid-list';
-
-const items = [
-  { thumbnail: { uri: 'https://lorempixel.com/200/200/animals' } },
-  { thumbnail: { uri: 'https://lorempixel.com/200/200/city' } },
-  { thumbnail: { uri: 'https://lorempixel.com/200/200/nature' } },
-  { thumbnail: { uri: 'https://lorempixel.com/200/200/cats' } },
-];
-
-export default class ProductList extends Component {
-  renderItem = ({ item, index }) => (
-    <Image style={styles.image} source={item.thumbnail} />
-  );
+export default class ProductList extends Component{
+  constructor(props) {
+    super(props);
+    this.state = ({
+        github       : 0,
+      }
+    )
+  }
 
   render() {
+    const miniCardStyle = {shadowColor: '#000000',shadowOffsetWidth : 2,shadowOffsetHeight: 2,shadowOpacity : 0.1,hadowRadius: 5,bgColor: '#ffffff',padding: 5,margin: 5,borderRadius: 3,elevation: 3,width: (Dimensions.get("window").width / 2) - 10, height:10
+    };
     return (
-      <View style={styles.container}>
-        <GridList
-          showSeparator
-          data={items}
-          numColumns={3}
-          renderItem={this.renderItem}
-        />
+      <View style={ styles.container }>
+              <View style={ {alignItems   : "center",flexDirection: "row",flexWrap     : 'wrap',} }>
+          <CardViewWithIcon
+            withBackground={ false }
+            androidIcon={ 'ios-square-outline' }
+            //iosIcon={ 'ios-square-outline' }
+            iconHeight={ 30 }
+            iconColor={ '#333' }
+            title={ 'Product 1' }
+            contentFontSize={ 12 }
+            titleFontSize={ 20 }
+            style={ miniCardStyle }
+             content={ "Example" }
+            // onPress={ () => this.setState({
+            //          github       : this.state.github + 1
+            // }) }
+          />
+        <CardViewWithIcon
+            withBackground={ false }
+            androidIcon={ 'ios-square-outline' }
+            iosIcon={ 'logo-github' }
+            iconHeight={ 30 }
+            iconColor={ '#333' }
+            title={ 'Product 2' }
+            contentFontSize={ 12 }
+            titleFontSize={ 20 }
+            style={ miniCardStyle }
+             content={ "Example" }
+            // onPress={ () => this.setState({
+            //          github       : this.state.github + 1
+            // }) }
+          />
+        </View>
+        <View style={ {alignItems   : "center",flexDirection: "row",flexWrap     : 'wrap',} }>
+          <CardViewWithIcon
+            withBackground={ false }
+            androidIcon={ 'ios-square-outline' }
+            iosIcon={ 'logo-github' }
+            iconHeight={ 30 }
+            iconColor={ '#333' }
+            title={ 'Product 3' }
+            contentFontSize={ 12 }
+            titleFontSize={ 20 }
+            style={ miniCardStyle }
+             content={ "Example" }
+            // onPress={ () => this.setState({
+            //          github       : this.state.github + 1
+            // }) }
+          />
+        <CardViewWithIcon
+            withBackground={ false }
+            androidIcon={ 'ios-square-outline' }
+            iosIcon={ 'logo-github' }
+            iconHeight={ 30 }
+            iconColor={ '#333' }
+            title={ 'Product 4' }
+            contentFontSize={ 12 }
+            titleFontSize={ 20 }
+            style={ miniCardStyle }
+             content={ "Example" }
+            // onPress={ () => this.setState({
+            //          github       : this.state.github + 1
+            // }) }
+          />
+        </View>
+        <View style={ {alignItems   : "center",flexDirection: "row",flexWrap     : 'wrap',} }>
+          <CardViewWithIcon
+            withBackground={ false }
+            androidIcon={ 'ios-square-outline' }
+            iosIcon={ 'logo-github' }
+            iconHeight={ 30 }
+            iconColor={ '#333' }
+            title={ 'Product 5' }
+            contentFontSize={ 12 }
+            titleFontSize={ 20 }
+            style={ miniCardStyle }
+             content={ "Example" }
+            // onPress={ () => this.setState({
+            //          github       : this.state.github + 1
+            // }) }
+          />
+        <CardViewWithIcon
+            withBackground={ false }
+            androidIcon={ 'ios-square-outline' }
+            iosIcon={ 'logo-github' }
+            iconHeight={ 30 }
+            iconColor={ '#333' }
+            title={ 'Product 6' }
+            contentFontSize={ 12 }
+            titleFontSize={ 20 }
+            style={ miniCardStyle }
+             content={ "Example" }
+            // onPress={ () => this.setState({
+            //          github       : this.state.github + 1
+            // }) }
+          />
+        </View>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-  },
-  image: {
-    width: '100%',
-    height: '100%',
-    borderRadius: 10,
-  },
-});
+const styles = StyleSheet.create({container: {flex           : 2, alignItems     : 'center',backgroundColor: '#F5FCFF',paddingTop     : 25,},});
