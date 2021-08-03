@@ -6,6 +6,7 @@ import {
   StatusBar,
   ScrollView,
   View,
+  Dimensions,
   Image,
   TouchableOpacity,
   ActivityIndicator,
@@ -17,6 +18,7 @@ import { THEME_WHITE_COLOR } from "../../constants/theme";
 import styles from "./style";
 
 import Swiper from 'react-native-swiper';
+import { Card, ListItem, Button, Icon } from 'react-native-elements'
 import CardView from 'react-native-cardview'
 
 class ResetPassword extends React.Component {
@@ -91,7 +93,7 @@ class ResetPassword extends React.Component {
           <ScrollView style={styles.scroll}>
             
 
-            {error && message && <ErrorMessage message={message} />}
+            {error && message && <ErrorMessage message={message} />}  
 
       <View style={styles.sliderContainer}>
          <View style={styles.slide}>
@@ -124,7 +126,7 @@ class ResetPassword extends React.Component {
           Sign In to Continue!
         </Text>
     
-
+        <Card style={{ color: 'grey !important', }}>
             <View style={styles.container}>
             {/* <TextInputComponent
               label={"Email"}
@@ -136,7 +138,7 @@ class ResetPassword extends React.Component {
               placeholder={"Enter your Email"}
             /> */}
 
-<TextInputComponent
+            <TextInputComponent
               label={"Email"}
               onChangeText={(text) => this.onChangePassword(text)}
              // value={secret}
@@ -175,6 +177,8 @@ class ResetPassword extends React.Component {
           <Text style={styles.buttonText}>{'SIGN IN'}</Text>
         </TouchableOpacity>
         </View>
+        
+        </Card>
           </ScrollView>
           
         </SafeAreaView>

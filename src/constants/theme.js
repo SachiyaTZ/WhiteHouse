@@ -10,6 +10,7 @@ export const THEME_ERROR_RED = "#E22934";
 export const THEME_ERROR_BOX_RED = "#F43F60";
 export const THEME_YELLOW = "#FFBD14";
 export const THEME_GREEN_COLOR = "#10C94F";
+export const THEME_ASH_COLOR = "#CDCDCD"
 
 export const COLORS = {
     SIDEBAR_TOP_BACKGROUND: "#ff5845",

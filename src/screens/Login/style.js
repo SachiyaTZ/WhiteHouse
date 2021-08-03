@@ -18,6 +18,20 @@ const styles = StyleSheet.create({
     backgroundColor: THEME_WHITE_COLOR,
     
   },
+  // cardcontainer:{
+  //   shadowColor: '#000000',
+  //  // shadowOffsetWidth : 2,
+  //  // shadowOffsetHeight: 2,
+  //   shadowOpacity : 0.3,
+  //   shadowRadius: 5,
+  //   bgColor: '#000000' , 
+  //   padding: 5,
+  //   margin: 5,
+  //   borderRadius: 5,
+  //   elevation: 35,
+  //   height: '20px !important'
+   
+  // },
   container : {
     marginTop:50,
     marginBottom:400
