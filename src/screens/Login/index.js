@@ -82,6 +82,7 @@ class ResetPassword extends React.Component {
 
   render() {
     const { confirmPassword, password, error, message } = this.state;
+    const miniCardStyle = {shadowColor: '#000000',shadowOffsetWidth : 2,shadowOffsetHeight: 2,shadowOpacity : 0.1,hadowRadius: 5,bgColor: '#ffffff',padding: 5,margin: 5,borderRadius: 3,elevation: 3,width: (Dimensions.get("window").width / 2) - 10, height:10}
     return (
       
       <React.Fragment>
@@ -92,7 +93,6 @@ class ResetPassword extends React.Component {
         <SafeAreaView style={styles.signInContainer}>
           <ScrollView style={styles.scroll}>
             
-
             {error && message && <ErrorMessage message={message} />}  
 
       <View style={styles.sliderContainer}>
@@ -126,7 +126,7 @@ class ResetPassword extends React.Component {
           Sign In to Continue!
         </Text>
     
-        <Card style={{ color: 'grey !important', }}>
+        <Card style={ miniCardStyle }>
             <View style={styles.container}>
             {/* <TextInputComponent
               label={"Email"}
@@ -158,18 +158,6 @@ class ResetPassword extends React.Component {
               placeholder={"Enter Your Password"}
             />
 
-      
-
-
-            {/* <TextInputComponent
-              label={"CONFIRM PASSWORD"}
-              onChangeText={(text) => this.onChangeConfirmPassword(text)}
-              value={confirmPassword}
-              error={error && !confirmPassword}
-              secureTextEntry={true}
-              style={styles.textInput}
-              placeholder={""}
-            /> */}
             <TouchableOpacity
           style={styles.buttonStyleActive}
           onPress={() => this.handleSubmit()}
