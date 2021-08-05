@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  THEME_GREY_COLOR,
   THEME_WHITE_COLOR,
   THEME_LIGHT_BLUE,
   THEME_BLUE_COLOR,
@@ -15,29 +16,50 @@ const styles = StyleSheet.create({
   scroll: {
     flex: 1,
     paddingHorizontal: 40,
-    backgroundColor: THEME_WHITE_COLOR,
+    backgroundColor: THEME_GREY_COLOR,
     
   },
-  // cardcontainer:{
-  //   shadowColor: '#000000',
-  //  // shadowOffsetWidth : 2,
-  //  // shadowOffsetHeight: 2,
-  //   shadowOpacity : 0.3,
-  //   shadowRadius: 5,
-  //   bgColor: '#000000' , 
-  //   padding: 5,
-  //   margin: 5,
-  //   borderRadius: 5,
-  //   elevation: 35,
-  //   height: '20px !important'
-   
-  // },
+
+
+
+  MainContainer: {
+ 
+    flex: 1,
+   // backgroundColor: '#F5FCFF',
+   backgroundColor: THEME_GREY_COLOR,
+    justifyContent: 'center',
+    alignItems: 'center',
+ 
+  },
+ 
+  cardViewStyle:{
+  marginTop:20,
+    width: 320, 
+    height: 350,
+    borderRadius: 0,
+    marginBottom:20,
+    borderWidth:5
+ 
+  },
+ 
+  cardView_InsideText:{
+ 
+    fontSize: 20, 
+    color: '#000', 
+    textAlign: 'center', 
+    marginTop: 50    
+ 
+  },
   container : {
+    marginLeft:20,
+    marginRight:20,
     marginTop:50,
     marginBottom:400
   },
   textInput: {
     height: 45,
+    //color:"black",
+    //fontWeight: "600",
     borderColor: THEME_LIGHT_BLUE,
     borderWidth: 1,
     borderRadius: 8,
@@ -85,10 +107,11 @@ const styles = StyleSheet.create({
   },
   buttonStyleActive: {
     flexDirection: "row",
+    marginTop:10,
     height: 45,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#003366",
+    backgroundColor: "#0065cc",
     borderRadius: 8
   },
   buttonText: {
@@ -97,18 +120,19 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "800",
   },
+  
   sliderImage: {
-    height: '100%',
-    width: '100%',
+    height: '40%',
+    width: '40%',
     alignSelf: 'center',
-    borderRadius: 8,
-    marginTop:10
+    //borderRadius: 8,
+    //marginTop:10
   },
   slide: {
     flex: 1,
     justifyContent: 'center',
     backgroundColor: 'transparent',
-    borderRadius: 8,
+   // borderRadius: 8,
   },
   sliderContainer: {
     height: 200,
@@ -117,6 +141,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
     borderRadius: 8,
+   
   },
 });
 

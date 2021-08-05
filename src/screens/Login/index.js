@@ -82,7 +82,6 @@ class ResetPassword extends React.Component {
 
   render() {
     const { confirmPassword, password, error, message } = this.state;
-    const miniCardStyle = {shadowColor: '#000000',shadowOffsetWidth : 2,shadowOffsetHeight: 2,shadowOpacity : 0.1,hadowRadius: 5,bgColor: '#ffffff',padding: 5,margin: 5,borderRadius: 3,elevation: 3,width: (Dimensions.get("window").width / 2) - 10, height:10}
     return (
       
       <React.Fragment>
@@ -93,22 +92,43 @@ class ResetPassword extends React.Component {
         <SafeAreaView style={styles.signInContainer}>
           <ScrollView style={styles.scroll}>
             
+
             {error && message && <ErrorMessage message={message} />}  
 
       <View style={styles.sliderContainer}>
          <View style={styles.slide}>
               <Image
-              source={require('../../assets/whitelogo.jpg')}
+              source={require('../../assets/whitehouselogo.png')}
               resizeMode="cover"
               style={styles.sliderImage}
             
             />
           </View>
       </View>
-
+      <Text
+          style={{
+           // marginTop:2,
+            alignSelf: 'center',
+            fontSize: 19,
+            fontWeight: 'bold',
+            color: '#333',
+          }}>
+          WHITEHOUSE PRODUCTS LTD
+        </Text>
+        <Text
+          style={{
+            marginTop:2,
+            alignSelf: 'center',
+            fontSize: 19,
+            fontWeight: 'bold',
+            color: '#0065cc',
+          }}>
+          If it's Hydraulic we do it
+        </Text>
       
       <Text
           style={{
+            marginTop:30,
             alignSelf: 'center',
             fontSize: 19,
             fontWeight: 'bold',
@@ -121,13 +141,21 @@ class ResetPassword extends React.Component {
             alignSelf: 'center',
             fontSize: 17,
             fontWeight: 'bold',
-            color: 'grey',
+            color: '#93999c',
           }}>
           Sign In to Continue!
         </Text>
     
-        <Card style={ miniCardStyle }>
-            <View style={styles.container}>
+        <View style={styles.MainContainer}>
+ 
+ <CardView
+   cardElevation={5}
+   cardMaxElevation={5}
+   cornerRadius={15}
+   style={styles.cardViewStyle}>
+
+         {/* <Text style={styles.cardView_InsideText}> Simple CardView </Text> */}
+         <View style={styles.container}>
             {/* <TextInputComponent
               label={"Email"}
               // onChangeText={(text) => this.onChangePassword(text)}
@@ -149,7 +177,7 @@ class ResetPassword extends React.Component {
             />
 
             <TextInputComponent
-              label={"PASSWORD"}
+              label={"Password"}
               // onChangeText={(text) => this.onChangePassword(text)}
               // value={password}
               // error={error && !password}
@@ -158,6 +186,18 @@ class ResetPassword extends React.Component {
               placeholder={"Enter Your Password"}
             />
 
+      
+
+
+            {/* <TextInputComponent
+              label={"CONFIRM PASSWORD"}
+              onChangeText={(text) => this.onChangeConfirmPassword(text)}
+              value={confirmPassword}
+              error={error && !confirmPassword}
+              secureTextEntry={true}
+              style={styles.textInput}
+              placeholder={""}
+            /> */}
             <TouchableOpacity
           style={styles.buttonStyleActive}
           onPress={() => this.handleSubmit()}
@@ -165,8 +205,12 @@ class ResetPassword extends React.Component {
           <Text style={styles.buttonText}>{'SIGN IN'}</Text>
         </TouchableOpacity>
         </View>
-        
-        </Card>
+
+ </CardView>
+ 
+</View>
+
+
           </ScrollView>
           
         </SafeAreaView>
@@ -186,6 +230,7 @@ const mapDispatchToProps = (dispatch) => ({
   clearStatus: () => dispatch(clearStatus()),
   resetPassword: (userData) => dispatch(resetPassword(userData)),
 });
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResetPassword);
 

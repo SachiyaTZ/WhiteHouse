@@ -9,11 +9,6 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
-// import TextInputComponent from "../../components/Common/TextInputCustom";
-// import ErrorMessage from "../../components/Common/ErrorMessageComponent";
-// //import { resetPassword, clearStatus } from "../../actions/userAction";
-// import { THEME_WHITE_COLOR } from "../../constants/theme";
-// import styles from "./style";
 
 import Swiper from 'react-native-swiper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -42,6 +37,12 @@ class Dashboard extends React.Component {
 };
 handleProductList = () => {
   this.props.navigation.navigate("ProductList")
+};
+
+handleSubmitMyAccountViewReturnRequest = () => {
+
+  this.props.navigation.navigate("MyAccountViewReturnRequest")
+
 };
 
 
@@ -222,6 +223,15 @@ handleProductList = () => {
             </Text>
           </View>
         </View>
+        <View style={{flexDirection: 'row', justifyContent: 'flex-end', height: 32, paddingRight: 20, alignItems: 'center'}}>
+
+              <TouchableOpacity style={[styles.centerElement, {backgroundColor: '#003366', width: 100, height: 25, borderRadius: 5}]} onPress={() => this.handleSubmitMyAccountViewReturnRequest()}>
+
+                <Text style={{color: '#ffffff'}}>My Account</Text>
+
+              </TouchableOpacity>
+
+            </View>
       </View>
     </ScrollView>
     );

@@ -13,7 +13,8 @@ import ProductDetail2 from "../screens/ProductDetail2/index.js";
 import Checkout from "../screens/Checkout/index.js";
 import Cart from "../screens/Cart/index.js";
 import StackHeader from './util/StackHeader';
-import ProductList from "../screens/ProductList/index.js"
+import ProductList from "../screens/ProductList/index.js";
+import MyAccountViewReturnRequest from "../screens/MyAccountViewReturnRequest/index.js"
 
 
 
@@ -25,19 +26,19 @@ const AuthStackNavigator = (props) => {
 
   return (
     <Stack.Navigator
-    headerMode="screen"
-            screenOptions={{
-               header:({scene,navigation})=>(
-                   <StackHeader scene={scene} navigation={navigation}/>
-               )
+    // headerMode="screen"
+    //         screenOptions={{
+    //            header:({scene,navigation})=>(
+    //                <StackHeader scene={scene} navigation={navigation}/>
+    //            )
             
-            }}
+    //         }}
     > 
       <Stack.Screen
         name="Login"
         component={Login}
         options={{
-          headerTitle: "WhiteHouse Products",
+         // headerTitle: "WhiteHouse Products",
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
@@ -47,7 +48,7 @@ const AuthStackNavigator = (props) => {
         name="ForgotPassword"
         component={ForgotPassword}
         options={{
-          headerTitle: "Home",
+          //headerTitle: "Home",
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
@@ -56,7 +57,7 @@ const AuthStackNavigator = (props) => {
         name="ProductDetail"
         component={ProductDetail}
         options={{
-          headerTitle: "Products",
+        //  headerTitle: "Products",
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
@@ -65,7 +66,7 @@ const AuthStackNavigator = (props) => {
         name="Cart"
         component={Cart}
         options={{
-          headerTitle: "Cart",
+        //  headerTitle: "Cart",
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
@@ -74,7 +75,7 @@ const AuthStackNavigator = (props) => {
         name="Checkout"
         component={Checkout}
         options={{
-          headerTitle: "Checkout",
+         // headerTitle: "Checkout",
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
@@ -83,22 +84,31 @@ const AuthStackNavigator = (props) => {
         name="ProductDetail2"
         component={ProductDetail2}
         options={{
-          headerTitle: "Products",
+         // headerTitle: "Products",
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
 
-<Stack.Screen
+      <Stack.Screen
         name="ProductList"
         component={ProductList}
         options={{
-          headerTitle: "ProductList",
+         // headerTitle: "ProductList",
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        }}
+      />
+        <Stack.Screen
+        name="MyAccountViewReturnRequest"
+        component={MyAccountViewReturnRequest}
+        options={{
+         // headerTitle: "MyAccountViewReturnRequest",
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
 
 
-    </Stack.Navigator>
+
+   </Stack.Navigator>
   );
 }
 

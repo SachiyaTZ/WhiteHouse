@@ -2,6 +2,7 @@ import Constants from 'expo-constants';
 
 export const THEME_BLACK_COLOR = "#000000";
 export const THEME_WHITE_COLOR = "#FFFFFF";
+export const THEME_GREY_COLOR = "#f6f6f6";
 export const THEME_RED_COLOR = "#E22934";
 export const THEME_BISMARK_COLOR = "#526E88";
 export const THEME_BLUE_COLOR = "#1746EA";
