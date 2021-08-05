@@ -42,14 +42,7 @@ const styles = StyleSheet.create({
  
   },
  
-  cardView_InsideText:{
- 
-    fontSize: 20, 
-    color: '#000', 
-    textAlign: 'center', 
-    marginTop: 50    
- 
-  },
+
   container : {
     marginLeft:20,
     marginRight:20,
@@ -104,6 +97,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: THEME_LIGHT_BLUE,
+  },
+  logoImg:{
+    marginTop:10,
+    width:100,
+    height:100,
+    
   },
   buttonStyleActive: {
     flexDirection: "row",

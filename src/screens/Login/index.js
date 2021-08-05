@@ -95,7 +95,7 @@ class ResetPassword extends React.Component {
 
             {error && message && <ErrorMessage message={message} />}  
 
-      <View style={styles.sliderContainer}>
+      {/* <View style={styles.sliderContainer}>
          <View style={styles.slide}>
               <Image
               source={require('../../assets/whitehouselogo.png')}
@@ -103,8 +103,12 @@ class ResetPassword extends React.Component {
               style={styles.sliderImage}
             
             />
-          </View>
-      </View>
+          </View> */}
+
+          <View style={{alignItems:'center', marginHorizontal:30}}>
+            <Image style={styles.logoImg}  source={require('../../assets/whitehouselogo.png')}/>
+          </View> 
+      {/* </View> */}
       <Text
           style={{
            // marginTop:2,
@@ -198,7 +202,7 @@ class ResetPassword extends React.Component {
               style={styles.textInput}
               placeholder={""}
             /> */}
-            <TouchableOpacity
+        <TouchableOpacity
           style={styles.buttonStyleActive}
           onPress={() => this.handleSubmit()}
         >
