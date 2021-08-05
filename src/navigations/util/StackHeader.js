@@ -6,20 +6,20 @@ const StackHeader=({scene,navigation})=>{
     const {options}=scene.descriptor;
     const title = options.headerTitle;
 
-    return (
-        <Appbar.Header>
-            {
-                navigation.canGoBack()?
-                (
-                    <Appbar.BackAction onPress={()=> navigation.pop()}/>
-                )
-                :
-                <MaterialCommunityIcons name="login" size={24} color="white"/>
-            }
-            <Appbar.Content title={title}/>
-            <Appbar.Action icon="cart" onPress={()=>console.log("Notification pressed")}/>
-        </Appbar.Header>
-    )
+    // return (
+    //     // <Appbar.Header>
+    //     //     {
+    //     //         navigation.canGoBack()?
+    //     //         (
+    //     //             <Appbar.BackAction onPress={()=> navigation.pop()}/>
+    //     //         )
+    //     //         :
+    //     //         <MaterialCommunityIcons name="login" size={24} color="white"/>
+    //     //     }
+    //     //     {/* <Appbar.Content title={title}/>
+    //     //     <Appbar.Action icon="cart" onPress={()=>console.log("Notification pressed")}/> */}
+    //     // </Appbar.Header>
+    // )
 };
 
 export default StackHeader;

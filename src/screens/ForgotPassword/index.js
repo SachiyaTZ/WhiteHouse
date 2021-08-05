@@ -10,6 +10,7 @@ import {
   ScrollView,
 } from "react-native";
 
+
 import Swiper from 'react-native-swiper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -86,17 +87,40 @@ handleSubmitMyAccountViewReturnRequest = () => {
       </View>
 
       <View style={{ width: width * 0.9, display: "flex", flexDirection: "row", flexWrap: "wrap", alignContent: "center", alignItems: "center", justifyContent: "center" }}>
-    <TouchableOpacity style={styles.categoryBtn} onPress={() => this.handleProductList()}>
-    <Image source={require('../../assets/motor.jpg')}style={{ width: "30%", height: 100, marginRight:11, marginTop:30, marginLeft:15 }} />
-    </TouchableOpacity>
-    <Image source={require('../../assets/hydraulic.jpg')}style={{ width: "30%", height: 100, marginRight:11, marginTop:30 }} />
-    <Image source={require('../../assets/pinn.jpg')}style={{ width: "30%", height: 100, marginTop:30 }} />
+    {/* <TouchableOpacity style={styles.categoryBtn} onPress={() => this.handleProductList()}> */}
+    <Image source={require('../../assets/motor.jpg')}style={{ width: "30%", height: 100, marginRight:11, marginTop:30, marginLeft:15, borderRadius:15}} />
+    
+    {/* </TouchableOpacity> */}
+    <Image source={require('../../assets/hydraulic.jpg')}style={{ width: "30%", height: 100, marginRight:11, marginTop:30,borderRadius:15 }} />
+
+    <Image source={require('../../assets/pinn.jpg')}style={{ width: "30%", height: 100, marginTop:30,borderRadius:15 }} />
+
+
+    {/* <Image source={require("img.png")}style={{ width: "45%", height: 200 }} />
+    <Image source={require("img.png")}style={{ width: "45%", height: 200 }} /> */}
+</View>
+<View style={{ width: width * 0.9, display: "flex", flexDirection: "row", flexWrap: "wrap", alignContent: "center", alignItems: "center", justifyContent: "center" }}>
+    {/* <TouchableOpacity style={styles.categoryBtn} onPress={() => this.handleProductList()}> */}
+    
+    <Text style={styles.productDetails }>
+             Hydraulic Motors
+            </Text>
+    {/* </TouchableOpacity> */}
+    
+    <Text style={styles.productDetails}>
+    Hydraulic Pumps
+            </Text>
+    
+    <Text style={styles.productDetails}>
+            
+             Other Products
+            </Text>
 
     {/* <Image source={require("img.png")}style={{ width: "45%", height: 200 }} />
     <Image source={require("img.png")}style={{ width: "45%", height: 200 }} /> */}
 </View>
 
-      <View style={styles.categoryContainer}>
+      {/* <View style={styles.categoryContainer}>
         <TouchableOpacity
           style={styles.categoryBtn}
           onPress={() => this.handleSubmit()}>
@@ -129,15 +153,15 @@ handleSubmitMyAccountViewReturnRequest = () => {
           </View>
           <Text style={styles.categoryBtnTxt}>Other</Text>
         </TouchableOpacity> */}
-                <TouchableOpacity style={styles.categoryBtn} onPress={() => this.handleSubmitCart()}>
+                {/* <TouchableOpacity style={styles.categoryBtn} onPress={() => this.handleSubmitCart()}>
           <View style={styles.categoryIcon}>
             <MaterialCommunityIcons name="cart" size={35} color="#FF6347" />
           </View>
           <Text style={styles.categoryBtnTxt}>Your Cart</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
 
-      </View>
-      <View style={[styles.categoryContainer, {marginTop: 10}]}>
+      {/* </View> */}
+      {/* <View style={[styles.categoryContainer, {marginTop: 10}]}> */}
         {/* <TouchableOpacity style={styles.categoryBtn} onPress={() => this.handleSubmitCart()}>
           <View style={styles.categoryIcon}>
             <MaterialCommunityIcons name="cart" size={35} color="#FF6347" />
@@ -156,17 +180,18 @@ handleSubmitMyAccountViewReturnRequest = () => {
           </View>
           <Text style={styles.categoryBtnTxt}>Show More</Text>
         </TouchableOpacity> */}
-      </View>
+      {/* </View> */}
 
       <View style={styles.cardsWrapper}>
         <Text
           style={{
-            alignSelf: 'center',
+            alignSelf: "auto",
             fontSize: 18,
             fontWeight: 'bold',
             color: '#333',
+            marginTop:30
           }}>
-          Recently Viewed
+          Hydraulic Pumps
         </Text>
         <View style={styles.card}>
           <View style={styles.cardImgWrapper}>
@@ -179,8 +204,8 @@ handleSubmitMyAccountViewReturnRequest = () => {
             </TouchableOpacity>
           </View>
           <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Hydraulic Pumps</Text>
-            <StarRating ratings={4} reviews={99} />
+            <Text style={styles.cardTitle}>Hydraulic Gear Pumps</Text>
+            {/* <StarRating ratings={4} reviews={99} /> */}
             <Text style={styles.cardDetails}>
               Choose from the world's largest range of pumps.
             </Text>
@@ -198,8 +223,8 @@ handleSubmitMyAccountViewReturnRequest = () => {
           </View>
           <View style={styles.cardInfo}>
 
-            <Text style={styles.cardTitle}>Hydraulic Motors</Text>
-            <StarRating ratings={4} reviews={99} />
+            <Text style={styles.cardTitle}>Hydraulic Piston Pumps</Text>
+            {/* <StarRating ratings={4} reviews={99} /> */}
             <Text style={styles.cardDetails}>
              Provide the motors needed for any application
             </Text>
@@ -216,8 +241,8 @@ handleSubmitMyAccountViewReturnRequest = () => {
             </TouchableOpacity>
           </View>
           <View style={styles.cardInfo}>
-            <Text style={styles.cardTitle}>Hydraulic Products</Text>
-            <StarRating ratings={4} reviews={99} />
+            <Text style={styles.cardTitle}>Hydraulic Vane Pumps</Text>
+            {/* <StarRating ratings={4} reviews={99} /> */}
             <Text style={styles.cardDetails}>
               Wide ranging inventory of hydraulic parts
             </Text>
@@ -344,9 +369,17 @@ const styles = StyleSheet.create({
   },
   cardTitle: {
     fontWeight: 'bold',
+    fontSize:17,
+    color:"#0065cc"
   },
   cardDetails: {
     fontSize: 12,
     color: '#444',
+  },
+  productDetails:{
+    fontSize: 14,
+    marginLeft:16,
+    fontWeight: 'bold',
+    color: '#0065cc'
   },
 });

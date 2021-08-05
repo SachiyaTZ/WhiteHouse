@@ -196,7 +196,8 @@ const styles = StyleSheet.create({
   },
   
   starContainer:{
-    justifyContent:'center', 
+  //  justifyContent:'center', 
+  justifyContent:"flex-start",
     marginHorizontal:30, 
     flexDirection:'row', 
     marginTop:20
