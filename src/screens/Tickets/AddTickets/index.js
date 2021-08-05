@@ -43,7 +43,7 @@ class SignIn extends React.Component {
           <ScrollView style={styles.scroll}>
 
             <View >
-            <Text>Tickets Page</Text>
+            <Text> Page</Text>
 
 
         </View>

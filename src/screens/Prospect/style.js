@@ -19,7 +19,14 @@ const styles = StyleSheet.create({
     backgroundColor: THEME_GREY_COLOR,
     
   },
-
+  name:{
+    marginTop:10,
+    fontSize:16,
+    color:"grey",
+    fontWeight:'bold',
+    textAlign:'left'
+  },
+  
 
   textAreaContainer: {
     borderColor: THEME_GREY_COLOR,
@@ -35,13 +42,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
  
   },
-  name:{
-    marginTop:10,
-    fontSize:16,
-    color:"black",
-    fontWeight:'bold',
-    textAlign:'left'
-  },
   textArea: {
     height: 150,
     justifyContent: "flex-start"
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   cardViewStyle:{
   marginTop:20,
     width: 320, 
-    height: 750,
+    height: 480,
     borderRadius: 0,
     marginBottom:20,
     borderWidth:5

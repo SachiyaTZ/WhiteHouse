@@ -10,7 +10,9 @@ import {
   ScrollView,
 } from "react-native";
 
-
+	
+import { StackNavigator } from 'react-navigation'
+import { NavigationContainer } from "@react-navigation/native";
 import Swiper from 'react-native-swiper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -48,7 +50,7 @@ handleSubmitMyAccountViewReturnRequest = () => {
 
 
   render() {
-    // const { navigation } = this.props;
+     const { navigation } = this.props;
     return (
       <ScrollView style={styles.container}>
 
@@ -248,15 +250,7 @@ handleSubmitMyAccountViewReturnRequest = () => {
             </Text>
           </View>
         </View>
-        <View style={{flexDirection: 'row', justifyContent: 'flex-end', height: 32, paddingRight: 20, alignItems: 'center'}}>
-
-              <TouchableOpacity style={[styles.centerElement, {backgroundColor: '#003366', width: 100, height: 25, borderRadius: 5}]} onPress={() => this.handleSubmitMyAccountViewReturnRequest()}>
-
-                <Text style={{color: '#ffffff'}}>My Account</Text>
-
-              </TouchableOpacity>
-
-            </View>
+  
       </View>
     </ScrollView>
     );

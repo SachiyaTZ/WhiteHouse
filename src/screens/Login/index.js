@@ -29,10 +29,12 @@ class ResetPassword extends React.Component {
       message: "",
       password: "",
       email:"",
-      //secret:"shemal.deabrew@redtransact.com"
+      secret:"shemal.deabrew@redtransact.com"
       
     };
   }
+
+
 
   componentDidMount() {
     //this.props.clearStatus();
@@ -61,12 +63,12 @@ class ResetPassword extends React.Component {
     // if (!password) {
     //   this.setState({ error: true, message: "Fill all required fields" });
     // } else
-    //  if (secret !== "shemal.deabrew@redtransact.com") {
-    //   this.setState({ error: true, message: "Unauthorized User" });
-    // } 
-    // else{
+     if (secret !== "shemal.deabrew@redtransact.com") {
+      this.setState({ error: true, message: "Unauthorized User" });
+    } 
+    else{
       this.props.navigation.navigate("ForgotPassword")
-   // }
+   }
     
     // else {
     //   let userData = {

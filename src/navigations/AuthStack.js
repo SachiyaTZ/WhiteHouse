@@ -14,10 +14,10 @@ import Checkout from "../screens/Checkout/index.js";
 import Cart from "../screens/Cart/index.js";
 import StackHeader from './util/StackHeader';
 import ProductList from "../screens/ProductList/index.js";
-import MyAccountViewReturnRequest from "../screens/MyAccountViewReturnRequest/index.js"
-
-
-
+import MyAccountViewReturnRequest from "../screens/MyAccountViewReturnRequest/index.js";
+import AccountPassword from "../screens/AccountPassword/index.js";
+import Statement from "../screens/Statement/index.js";
+import Prospect from "../screens/Prospect/index.js";
 const Stack = createStackNavigator();
 
 const AuthStackNavigator = (props) => {
@@ -26,13 +26,16 @@ const AuthStackNavigator = (props) => {
 
   return (
     <Stack.Navigator
-    // headerMode="screen"
-    //         screenOptions={{
-    //            header:({scene,navigation})=>(
-    //                <StackHeader scene={scene} navigation={navigation}/>
-    //            )
+    headerMode="screen"
+            screenOptions={{
+               header:({scene,navigation})=>(
+                   <StackHeader scene={scene} navigation={navigation}/>
+               )
             
-    //         }}
+            }}
+    screenOptions={{
+      headerShown: false
+    }}
     > 
       <Stack.Screen
         name="Login"
@@ -105,7 +108,30 @@ const AuthStackNavigator = (props) => {
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
       />
-
+          <Stack.Screen
+        name="AccountPassword"
+        component={AccountPassword}
+        options={{
+         // headerTitle: "MyAccountViewReturnRequest",
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        }}
+      />
+          <Stack.Screen
+        name="Statement"
+        component={Statement}
+        options={{
+         // headerTitle: "MyAccountViewReturnRequest",
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        }}
+      />
+             <Stack.Screen
+        name="Prospect"
+        component={Prospect}
+        options={{
+         // headerTitle: "MyAccountViewReturnRequest",
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        }}
+      />
 
 
    </Stack.Navigator>

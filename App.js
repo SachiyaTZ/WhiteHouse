@@ -9,10 +9,13 @@ import { store, persistor } from "./src/constants/storage";
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import AuthStackNavigator from "./src/navigations/AuthStack";
 import TicketStackNavigator from "./src/navigations/TicketStack";
-import Login from "./src/screens/Login";
-
-
-
+import Cart from "./src/screens/Cart";
+import ForgotPassword from "./src/screens/ForgotPassword";
+import MyAccountViewReturnRequest from "./src/screens/MyAccountViewReturnRequest";
+import CustomSidebarMenu from './src/navigations/CustomSidebarMenu';
+import AccountPassword from "./src/screens/AccountPassword";
+import Statement from "./src/screens/Statement";
+import Prospect from "./src/screens/Prospect";
 export default function App() {
 
   const Drawer = createDrawerNavigator();
@@ -24,18 +27,65 @@ export default function App() {
     <NavigationContainer>
       
     <Drawer.Navigator
-      initialRouteName="ForgotPassword"
+    
+      initialRouteName="AuthStackNavigator"
       drawerPosition="left"
       drawerType="front"
       hideStatusBar={true}
       screenOptions={{
         headerShown:true,
-        swipeEnabled:false
+        swipeEnabled:false,
+        headerTitle:null
       }}
+      drawerContent={(props) => <CustomSidebarMenu {...props} />}
     >
-      <Drawer.Screen name="AuthStack" component={AuthStackNavigator} />
-      <Drawer.Screen name="TicketStack" component={TicketStackNavigator} />
-      {/* <Drawer.Screen name="login" component={AuthStackNavigator} /> */}
+       <Drawer.Screen name="Login" options={{
+            // drawerLabel: 'Home',
+            groupName: '',
+            activeTintColor: '#0065cc',
+            
+          }}  component={AuthStackNavigator} />
+      <Drawer.Screen name="Home" options={{
+            drawerLabel: 'Home',
+            groupName: '',
+            activeTintColor: '#0065cc',
+            
+          }} component={ForgotPassword} />
+      <Drawer.Screen name="Quick Order"options={{
+            drawerLabel: 'Quick Order',
+            groupName: '',
+            activeTintColor: '#0065cc',
+          }} component={TicketStackNavigator} />
+      <Drawer.Screen name="Cart" options={{
+            drawerLabel: 'Cart',
+            groupName: '',
+            activeTintColor: '#0065cc',
+          }} component={Cart} />
+      <Drawer.Screen name="Profile" options={{
+            drawerLabel: '- Profile', 
+            groupName: 'My Account',
+            activeTintColor: '#0065cc',
+          }} component={MyAccountViewReturnRequest} />
+      <Drawer.Screen name="Customers" options={{
+            drawerLabel: '- Customers',
+            groupName: 'My Account',
+            activeTintColor: '#0065cc',
+          }} component={TicketStackNavigator} />
+      <Drawer.Screen name="Returns" options={{
+            drawerLabel: '- Returns',
+            groupName: 'My Account',
+            activeTintColor: '#0065cc',
+          }} component={Statement} />
+      <Drawer.Screen name="Prospect" options={{
+            drawerLabel: '- Prospect',
+            groupName: 'My Account',
+            activeTintColor: '#0065cc',
+          }} component={Prospect} />
+      <Drawer.Screen name="Password" options={{
+            drawerLabel: '- Password',
+            groupName: 'My Account',
+            activeTintColor: '#0065cc',
+          }} component={AccountPassword} />
     </Drawer.Navigator>
           {/* <AppStackNavigator />
           <FlashMessage position="top" /> */}

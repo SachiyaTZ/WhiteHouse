@@ -43,19 +43,15 @@ export default class ProductDetail extends Component {
          <View style={styles.cardcontainer}>
          <Text style={styles.name}>OPL003ALSFAN</Text>
 <Text style={{fontSize:16,
-      color:"blue",
+      color:"#0065cc",
       fontWeight:'bold',
       textAlign:'left',
       }}>OPL 1.22 CC/REV HYDRAULIC GEAR PUMP</Text>
 
-<View style={styles.starContainer}>
+{/* <View style={styles.starContainer}>
 <Image style={styles.star} source={{uri:"https://img.icons8.com/color/40/000000/star.png"}}/>
-<Text style={{fontSize:15,
-      color:"black",
-      fontWeight:'bold',
-      textAlign:'left',
-      }}> 4.9 (120 Reviews)</Text>
-</View>
+
+</View> */}
 
            <Text style={{fontSize:15,
            marginTop:10,
@@ -75,7 +71,7 @@ export default class ProductDetail extends Component {
       }}>Last Updated :29/06/2021</Text>
        <Text style={{fontSize:15,
            marginTop:10,
-      color:"blue",
+      color:"#0065cc",
       fontWeight:'bold',
       textAlign:'left',
       }}>Available in stock</Text>
@@ -85,7 +81,7 @@ export default class ProductDetail extends Component {
       fontWeight:'bold',
       textAlign:'left',
       }}>Your Price(ex.vat) :</Text>
-<Text style={styles.price}>$ 120.22</Text>
+<Text style={styles.price}>£ 120.22</Text>
 
          </View>
 
@@ -145,8 +141,8 @@ const styles = StyleSheet.create({
   price:{
     marginTop:10,
     fontSize:15,
-    color:"blue",
-    // fontWeight:'bold'
+    color:"#0065cc",
+    fontWeight:'bold'
   },
   description:{
     textAlign:'center',

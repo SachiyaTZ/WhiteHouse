@@ -50,7 +50,7 @@ export default class MyAccountViewReturnRequest extends React.Component {
 				fontWeight: 'bold',
 				color: '#0065cc',
 			  }}>
-			 Add New Address
+			 Profile
 			</Text>
 
 		
@@ -63,51 +63,43 @@ export default class MyAccountViewReturnRequest extends React.Component {
 	   style={styles.cardViewStyle}>
 	
 			 <View style={styles.container}>
-			 <View style={styles.textAreaContainer} >
-			 <TextInput
-      style={styles.textArea}
-      underlineColorAndroid="transparent"
-      placeholder="Type something"
-      placeholderTextColor="grey"
-      numberOfLines={10}
-      multiline={true}
-    />
-	</View>
+			 <Text style={styles.name}>Account No: 12345ZZ</Text>
+			 <Text style={styles.name}>User Name: admin@stack.io</Text>
 				<TextInputComponent
-				  label={"Address Contact First Name"}
+				  label={"Title"}
+				  secureTextEntry={true}
+				  style={styles.textInput}
+				  placeholder={"Select"}
+				/>
+					<TextInputComponent
+				  label={"First Name"}
 				  secureTextEntry={true}
 				  style={styles.textInput}
 				  placeholder={"John"}
 				/>
-					<TextInputComponent
-				  label={"Address Contact Last Name"}
-				  secureTextEntry={true}
+						<TextInputComponent
+				  label={"Last Name"}
 				  style={styles.textInput}
 				  placeholder={"Doe"}
 				/>
-						<TextInputComponent
-				  label={"Address Line 1"}
-				  style={styles.textInput}
-				  placeholder={"Address Line 1"}
-				/>
 	
 				<TextInputComponent
-				  label={"Address Line 2"}
+				  label={"Company"}
 				  secureTextEntry={true}
 				  style={styles.textInput}
-				  placeholder={"Address Line 2"}
+				  placeholder={"Stack Technologies"}
 				/>
 					<TextInputComponent
-				  label={"Address Line 3"}
+				  label={"Job"}
 				  secureTextEntry={true}
 				  style={styles.textInput}
-				  placeholder={"Address Line 3"}
+				  placeholder={"CEO"}
 				/>
 			<TouchableOpacity
 			  style={styles.buttonStyleActive}
-			  onPress={() => this.handleSubmit()}
+			//   onPress={() => this.handleSubmit()}
 			>
-			  <Text style={styles.buttonText}>{'SAVE'}</Text>
+			  <Text style={styles.buttonText}>{'UPDATE'}</Text>
 			</TouchableOpacity>
 			</View>
 	
