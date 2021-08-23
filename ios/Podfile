@@ -18,8 +18,13 @@ target 'frontend' do
   #     flipper_post_install(installer)
   #   end
   # end
+
+  #   use_flipper!()
+  #   post_install do |installer|
+  #     react_native_post_install(installer)
+  #   end
+  
   pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
 
-  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
 end
