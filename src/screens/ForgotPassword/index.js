@@ -8,23 +8,24 @@ import {
   StatusBar,
   TouchableOpacity,
   ScrollView,
+  ActivityIndicator
 } from "react-native";
 
 	
 import { StackNavigator } from 'react-navigation'
 import { NavigationContainer } from "@react-navigation/native";
 import Swiper from 'react-native-swiper';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Fontisto from 'react-native-vector-icons/Fontisto';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import StarRating from "../../components/StarRating";
+
 import {  Dimensions } from 'react-native';
 const { width, height } = Dimensions.get('screen');
 class Dashboard extends React.Component {
 
   constructor(props) {
     super(props);
+    // this.state = {
+    //   isLoading:true,
+    //   dataSource: null,
+    // }
   }
 
   handleSubmit = () => {
@@ -48,9 +49,36 @@ handleSubmitMyAccountViewReturnRequest = () => {
 
 };
 
+// componentDidMount(){
+//   return fetch('http://devsopapi.whitehouseproductsltd.com/products')
+//     .then((response) => response.json())
+//     .then((responseJson) => {
+//      this.setState({
+//        isLoading:false,
+//        dataSource:responseJson.movies,
+//      })
+//     })
+//     .catch((error) => {
+//       console.log(error)
+//     });
+// }
 
   render() {
      const { navigation } = this.props;
+    //  if(this.state.isLoading){
+    //    return (
+    //      <View>
+    //        <ActivityIndicator />
+    //      </View>
+    //    )
+    //  }
+
+    //  else{
+    //    let products = this.state.dataSource.map((val,key) => {
+    //      return <View key={key} >
+    //        {/* <Text>{val.skuimageurl}</Text> */}
+    //      </View>
+    //    })
     return (
       <ScrollView style={styles.container}>
 
@@ -118,71 +146,8 @@ handleSubmitMyAccountViewReturnRequest = () => {
              Other Products
             </Text>
 
-    {/* <Image source={require("img.png")}style={{ width: "45%", height: 200 }} />
-    <Image source={require("img.png")}style={{ width: "45%", height: 200 }} /> */}
+    
 </View>
-
-      {/* <View style={styles.categoryContainer}>
-        <TouchableOpacity
-          style={styles.categoryBtn}
-          onPress={() => this.handleSubmit()}>
-          <View style={styles.categoryIcon}>
-            <MaterialCommunityIcons name="water-pump" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Pumps</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.categoryBtn}
-          onPress={() => this.handleSubmit()}>
-          <View style={styles.categoryIcon}>
-            <MaterialCommunityIcons
-              name="hydro-power"
-              size={35}
-              color="#FF6347"
-            />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Motors</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => this.handleSubmit2()}>
-          <View style={styles.categoryIcon}>
-            <MaterialCommunityIcons name="hydraulic-oil-level" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Surplus</Text>
-        </TouchableOpacity>
-           {/* <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
-          <View style={styles.categoryIcon}>
-            <MaterialIcons name="expand-more" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Other</Text>
-        </TouchableOpacity> */}
-                {/* <TouchableOpacity style={styles.categoryBtn} onPress={() => this.handleSubmitCart()}>
-          <View style={styles.categoryIcon}>
-            <MaterialCommunityIcons name="cart" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Your Cart</Text>
-        </TouchableOpacity> */}
-
-      {/* </View> */}
-      {/* <View style={[styles.categoryContainer, {marginTop: 10}]}> */}
-        {/* <TouchableOpacity style={styles.categoryBtn} onPress={() => this.handleSubmitCart()}>
-          <View style={styles.categoryIcon}>
-            <MaterialCommunityIcons name="cart" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Your Cart</Text>
-        </TouchableOpacity> */}
-        {/* <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
-          <View style={styles.categoryIcon}>
-            <Fontisto name="shopping-store" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Services</Text>
-        </TouchableOpacity> */}
-        {/* <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
-          <View style={styles.categoryIcon}>
-            <MaterialIcons name="expand-more" size={35} color="#FF6347" />
-          </View>
-          <Text style={styles.categoryBtnTxt}>Show More</Text>
-        </TouchableOpacity> */}
-      {/* </View> */}
 
       <View style={styles.cardsWrapper}>
         <Text
@@ -256,6 +221,7 @@ handleSubmitMyAccountViewReturnRequest = () => {
     );
   }
 }
+//}
 
 
 const mapStateToProps = (state) => ({

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Platform,StyleSheet,Text,View,Dimensions} from 'react-native';
 import { CardViewWithIcon } from "react-native-simple-card-view";
-// import { makeStyles } from "@material-ui/core/styles";
 
 export default class ProductList extends Component{
   constructor(props) {
@@ -13,21 +12,8 @@ export default class ProductList extends Component{
   }
 
   render() {
-    const miniCardStyle = {
-      shadowColor: '#000000',
-      shadowOffsetWidth : 2,
-      shadowOffsetHeight: 2,
-      shadowOpacity : 0.1,
-      hadowRadius: 5,
-      bgColor: '#ffffff',
-      padding: 5,
-      margin: 5,
-      borderRadius: 3,
-      elevation: 3,
-      width: (Dimensions.get("window").width / 2) - 10, 
-      height:10
+    const miniCardStyle = {shadowColor: '#000000',shadowOffsetWidth : 2,shadowOffsetHeight: 2,shadowOpacity : 0.1,hadowRadius: 5,bgColor: '#ffffff',padding: 5,margin: 5,borderRadius: 3,elevation: 3,width: (Dimensions.get("window").width / 2) - 10, height:10
     };
-    console.log(miniCardStyle)
     return (
       <View style={ styles.container }>
               <View style={ {alignItems   : "center",flexDirection: "row",flexWrap     : 'wrap',} }>
@@ -105,7 +91,7 @@ export default class ProductList extends Component{
             contentFontSize={ 12 }
             titleFontSize={ 20 }
             style={ miniCardStyle }
-            content={ "Example" }
+             content={ "Example" }
             // onPress={ () => this.setState({
             //          github       : this.state.github + 1
             // }) }
